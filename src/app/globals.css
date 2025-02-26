@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFFF;
+  --foreground: #C1BCAC;
+  --primary: #214e34;
+  --secondary: #979B8D;
+  --tertiary:  #EFD0CA
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #a0a0a0;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+a {
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--secondary);
+}

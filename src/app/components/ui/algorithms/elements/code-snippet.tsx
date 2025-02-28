@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+// @ts-expect-error typescript error
 import Prism from "prismjs";
 
 interface CodeSnippetProps {

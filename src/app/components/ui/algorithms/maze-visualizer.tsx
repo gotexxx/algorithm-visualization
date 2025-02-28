@@ -107,7 +107,7 @@ const MazeVisualizer: React.FC = () => {
         break;
       }
 
-      for (let [dx, dy] of directions) {
+      for (const [dx, dy] of directions) {
         const newRow = row + dx;
         const newCol = col + dy;
         if (

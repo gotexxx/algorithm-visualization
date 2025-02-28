@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Hero from "./components/ui/hero";
 import MazeVisualizer from "@/app/components/ui/algorithms/maze-visualizer";
 import {AlgorithmDescription} from "@/app/components/ui/algorithms/elements/algorithm-description";
@@ -54,7 +54,7 @@ export default function Home() {
     return (
     <div className=" items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-            {/*<Hero title={"Halloo"} text={"Filip Stosik"} />*/}
+            <Hero title={"Algorithmen"} text={""} />
             {/*<Image*/}
             {/*  className="dark:invert"*/}
             {/*  src="https://nextjs.org/icons/next.svg"*/}

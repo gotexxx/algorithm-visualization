@@ -69,6 +69,7 @@ export const BogoSort: React.FC = () => {
             <p className="mt-4 text-gray-700">
                 Random array is equal to: {randomArray.join(", ")}
             </p>
+            <p>{arrayError}</p>
         </div>
     );
 };

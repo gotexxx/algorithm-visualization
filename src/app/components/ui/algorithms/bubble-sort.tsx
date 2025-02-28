@@ -48,42 +48,44 @@ export const BubbleSort: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
-      <div className="flex justify-center items-end mb-4 min-h-[500px]">
-        {randomArray.map((value, index) => {
-          const isHighlighted =
-            highlightIndices &&
-            (index === highlightIndices[0] || index === highlightIndices[1]);
-          return (
-            <div
-              key={index}
-              className={`w-8 min-h-5 mx-1 text-white flex items-center justify-center font-bold ${
-                isHighlighted ? "bg-yellow-500" : "bg-blue-500"
-              }`}
-              style={{ height: `${value * 3}px` }}
-            >
-              {value}
-            </div>
-          );
-        })}
+      <div className="p-4">
+          <div className="flex justify-center items-end mb-4 min-h-[500px]">
+              {randomArray.map((value, index) => {
+                  const isHighlighted =
+                      highlightIndices &&
+                      (index === highlightIndices[0] || index === highlightIndices[1]);
+                  return (
+                      <div
+                          key={index}
+                          className={`w-8 min-h-5 mx-1 text-white flex items-center justify-center font-bold ${
+                              isHighlighted ? "bg-yellow-500" : "bg-blue-500"
+                          }`}
+                          style={{height: `${value * 3}px`}}
+                      >
+                          {value}
+                      </div>
+                  );
+              })}
+          </div>
+          <button
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400"
+              onClick={() => bubbleSort(randomArray)}
+              disabled={sorting}
+          >
+              {sorting ? "Sorting..." : "Start Bubble Sort"}
+          </button>
+          <AddToArray
+              randomArray={randomArray}
+              arrayLength={arrayLength}
+              setArrayLength={setArrayLength}
+              setRandomArray={setRandomArray}
+              sorting={sorting}
+          />
+          <p className="mt-4 text-gray-700">
+              Random array is equal to: {randomArray.join(", ")}
+          </p>
+          <p>{arrayError}</p>
+
       </div>
-      <button
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400"
-        onClick={() => bubbleSort(randomArray)}
-        disabled={sorting}
-      >
-        {sorting ? "Sorting..." : "Start Bubble Sort"}
-      </button>
-      <AddToArray
-        randomArray={randomArray}
-        arrayLength={arrayLength}
-        setArrayLength={setArrayLength}
-        setRandomArray={setRandomArray}
-        sorting={sorting}
-      />
-      <p className="mt-4 text-gray-700">
-        Random array is equal to: {randomArray.join(", ")}
-      </p>
-    </div>
   );
 };

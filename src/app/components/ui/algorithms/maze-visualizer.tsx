@@ -165,7 +165,7 @@ const MazeVisualizer: React.FC = () => {
 
       {/* Grid container with explicit grid template for correct layout */}
       <div
-        className={`grid gap-1`}
+        className={`grid border border-solid border-black`}
         style={{
           gridTemplateColumns: `repeat(${GRID_SIZE}, minmax(0, 1fr))`,
         }}

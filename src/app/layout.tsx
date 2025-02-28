@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Filip Stosik Portfolio",
-  description: "Portfolio app",
+  title: "Algortihmen",
+  description: "Algortihmen",
 };
 
 export default function RootLayout({

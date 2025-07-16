@@ -54,7 +54,6 @@ export default function Home() {
     return (
     <div className=" items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-            <Hero title={"Algorithmen"} text={""} />
             {/*<Image*/}
             {/*  className="dark:invert"*/}
             {/*  src="https://nextjs.org/icons/next.svg"*/}
@@ -64,8 +63,11 @@ export default function Home() {
             {/*  priority*/}
             {/*/>*/}
 
-            <section>
-                <MazeVisualizer/>
+            <section className={"grid grid-cols-2 gap-20 mt-[50px]"}>
+                <MazeVisualizer  />
+                <p className={"text-black text-2xl"}>
+                    Die Suche startet vom Startpunkt (oben links). Dabei wird jede erreichbare Zelle Schritt für Schritt angeschaut. Diese Suche nennt man Breitensuche, sie prüft zuerst alle Nachbarn, dann deren Nachbarn usw. Sobald das Ziel (unten rechts) gefunden wurde, merkt sich das Programm den Weg zurück und markiert ihn grün. Gelbe Felder zeigen besuchte Zellen.
+                    So erkennt man den kürzesten Weg vom Start zum Ziel.</p>
             </section>
             <section className={"my-10"}>
                 <AlgorithmDescription

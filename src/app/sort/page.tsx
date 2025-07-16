@@ -1,4 +1,3 @@
-import Hero from "@/app/components/ui/hero";
 import { BubbleSort } from "@/app/components/ui/algorithms/bubble-sort";
 import { AlgorithmDescription } from "@/app/components/ui/algorithms/elements/algorithm-description";
 import { SelectionSort } from "@/app/components/ui/algorithms/selection-sort";
@@ -86,7 +85,6 @@ const Sort: React.FC = () => {
     return (
         <div>
             <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-                <Hero title={"Sorting Algorithmen"} text={"Algorithmen zum Sortieren"} />
 
                 <section className={"text-black text-2xl"}>
                     <p>

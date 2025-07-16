@@ -1,5 +1,4 @@
 // import Image from "next/image";
-import Hero from "./components/ui/hero";
 import MazeVisualizer from "@/app/components/ui/algorithms/maze-visualizer";
 import {AlgorithmDescription} from "@/app/components/ui/algorithms/elements/algorithm-description";
 import {BubbleSort} from "@/app/components/ui/algorithms/bubble-sort";

@@ -1,4 +1,3 @@
-import Hero from "../components/ui/hero";
 import MazeVisualizer from "../components/ui/algorithms/maze-visualizer";
 
 const Maze: React.FC = () => {
